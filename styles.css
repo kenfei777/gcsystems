@@ -1,145 +1,141 @@
-/* =========================
-   GCSystems – defensive CSS
-   Goal: stop images from breaking layout (GitHub Pages)
-   ========================= */
+/* =========================================================
+   GCSystems Canada — Stable commercial stylesheet (vFinal)
+   Drop-in replacement for styles.css
+   Goals:
+   - Prevent oversized images breaking layout (GitHub Pages)
+   - Consistent spacing/typography
+   - Responsive, clean "med-tech" look
+   ========================================================= */
 
+/* ---------- Base / Reset ---------- */
 :root{
-  --bg:#f4f6fb;
-  --card:#ffffff;
-  --text:#0f172a;
-  --muted:#475569;
-  --line:rgba(15,23,42,.10);
-  --brand:#0b4aa2;
-  --brand2:#133e8a;
-  --radius:18px;
-  --shadow:0 18px 50px rgba(15,23,42,.10);
-  --shadow2:0 10px 25px rgba(15,23,42,.08);
-  --max:1200px;
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #475569;
+  --line: rgba(15, 23, 42, .10);
+  --shadow: 0 18px 50px rgba(2, 8, 23, .10);
+  --shadow-soft: 0 10px 30px rgba(2, 8, 23, .08);
+
+  --brand: #0b3b95;
+  --brand-2: #1f6feb;
+  --radius: 24px;
+
+  --wrap: 1200px;
+  --pad: clamp(16px, 3vw, 28px);
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
 body{
   margin:0;
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-  line-height:1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, "Noto Sans", sans-serif;
   color:var(--text);
   background:var(--bg);
+  line-height:1.6;
+  overflow-x:hidden;
 }
 
-a{color:inherit; text-decoration:none}
-a:hover{opacity:.9}
+img, svg, video, canvas{
+  max-width:100%;
+  height:auto;
+}
 
-.container{
-  width:min(92%, var(--max));
+a{ color:inherit; text-decoration:none; }
+a:hover{ text-decoration:none; }
+
+/* ---------- Layout helpers ---------- */
+.wrap{
+  width:min(var(--wrap), 100% - 2*var(--pad));
   margin-inline:auto;
 }
 
 .section{
-  padding:56px 0;
+  padding: clamp(26px, 4vw, 44px) 0;
 }
 
-h1,h2,h3{line-height:1.15; margin:0 0 12px}
-p{margin:0 0 14px; color:var(--muted)}
-.small{font-size:.92rem; color:var(--muted)}
-
-/* =========================
-   GLOBAL IMAGE SAFETY NET
-   ========================= */
-img{
-  display:block;
-  max-width:100%;
-  height:auto;               /* never stretch height */
+.h1{
+  font-size: clamp(34px, 5vw, 56px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-weight: 800;
+  margin: 0 0 14px 0;
+}
+.h2{
+  font-size: clamp(22px, 3vw, 30px);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+.kicker{
+  font-size: 12px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.78);
+  margin: 0 0 10px 0;
+}
+.sub{
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: rgba(255,255,255,.86);
+  max-width: 64ch;
 }
 
-/* Any content image: cap height + crop instead of breaking layout */
-main img,
-.section img,
-.container img,
-.card img,
-figure img,
-.media img{
-  width:100%;
-  max-height:520px;          /* 핵: stops tall images */
-  object-fit:cover;
-  border-radius:var(--radius);
+/* ---------- Header / Nav ---------- */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(244,246,251,.85);
+  border-bottom: 1px solid var(--line);
 }
 
-/* If you have explicit "hero" images, keep them wide + not too tall */
-.hero img,
-.hero-media img,
-.hero__media img{
-  width:100%;
-  height:clamp(260px, 42vw, 520px); /* responsive, never crazy tall */
-  object-fit:cover;
-  border-radius:var(--radius);
-}
-
-/* For split layouts (image left, text right) */
-.split img,
-.split-media img,
-.two-col img{
-  height:clamp(260px, 38vw, 460px);
-  object-fit:cover;
-}
-
-/* =========================
-   HEADER / NAV
-   ========================= */
-.header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(244,246,251,.78);
-  backdrop-filter:saturate(180%) blur(14px);
-  border-bottom:1px solid var(--line);
-}
-
-.navbar{
+.nav{
   display:flex;
   align-items:center;
-  gap:18px;
-  padding:14px 0;
+  justify-content:space-between;
+  gap: 18px;
+  padding: 14px 0;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
-  font-weight:800;
+  gap: 12px;
+  font-weight: 800;
 }
-
 .brand-badge{
-  width:34px;height:34px;border-radius:10px;
-  background:linear-gradient(135deg,var(--brand),#0b77d5);
-  box-shadow:0 10px 20px rgba(11,74,162,.25);
+  width: 28px;
+  height: 28px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 10px 20px rgba(11,59,149,.20);
 }
 
 .navlinks{
   display:flex;
   align-items:center;
-  gap:18px;
-  margin-left:12px;
-  flex-wrap:wrap;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: rgba(15,23,42,.80);
+  font-weight: 600;
 }
 
 .navlinks a{
-  padding:8px 10px;
-  border-radius:12px;
-  color:rgba(15,23,42,.88);
-  font-weight:600;
+  padding: 8px 12px;
+  border-radius: 999px;
 }
-
-.navlinks a.active,
 .navlinks a:hover{
-  background:rgba(11,74,162,.08);
+  background: rgba(31,111,235,.08);
+  color: var(--brand);
 }
 
 .nav-cta{
-  margin-left:auto;
   display:flex;
   align-items:center;
-  gap:10px;
+  gap: 10px;
 }
 
 /* Buttons */
@@ -147,141 +143,173 @@ figure img,
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:12px 18px;
-  border-radius:999px;
-  border:1px solid rgba(11,74,162,.20);
-  font-weight:700;
-  gap:10px;
-  white-space:nowrap;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(15,23,42,.14);
+  background: rgba(255,255,255,.85);
+  font-weight: 700;
+  color: rgba(15,23,42,.92);
+  box-shadow: 0 10px 30px rgba(2,8,23,.08);
+  transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
+.btn:hover{ transform: translateY(-1px); box-shadow: 0 16px 40px rgba(2,8,23,.10); }
 
 .btn.primary{
-  background:linear-gradient(135deg,var(--brand),var(--brand2));
-  color:#fff;
-  border-color:transparent;
-  box-shadow:0 16px 35px rgba(11,74,162,.25);
+  border: 0;
+  color: white;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  box-shadow: 0 16px 44px rgba(11,59,149,.22);
 }
+.btn.primary:hover{ box-shadow: 0 20px 54px rgba(11,59,149,.28); }
 
-.btn.ghost{
-  background:#fff;
-  color:var(--brand);
-  box-shadow:var(--shadow2);
-}
-
-/* =========================
-   HERO
-   ========================= */
+/* ---------- Hero ---------- */
 .hero{
-  padding:38px 0 18px;
-}
-
-.hero-grid{
-  display:grid;
-  grid-template-columns: 1.15fr .85fr;
-  gap:26px;
-  align-items:stretch;
-}
-
-.hero-card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:calc(var(--radius) + 6px);
-  box-shadow:var(--shadow);
-  overflow:hidden;
-}
-
-.hero-media{
-  overflow:hidden;
-  border-radius:calc(var(--radius) + 6px);
-}
-
-.kicker{
-  letter-spacing:.22em;
-  text-transform:uppercase;
-  font-size:.78rem;
-  color:rgba(15,23,42,.55);
-  margin-bottom:10px;
-}
-
-.hero-content{
-  padding:22px 22px 24px;
-}
-
-.hero-actions{
+  position:relative;
+  min-height: clamp(380px, 56vh, 620px);
   display:flex;
-  gap:12px;
-  flex-wrap:wrap;
-  margin-top:16px;
-}
-
-.hero-title{
-  font-size:clamp(34px, 3.8vw, 56px);
-}
-
-@media (max-width: 980px){
-  .hero-grid{grid-template-columns:1fr}
-}
-
-/* =========================
-   CARDS / GRIDS
-   ========================= */
-.card{
-  background:var(--card);
-  border:1px solid var(--line);
-  border-radius:calc(var(--radius) + 6px);
-  box-shadow:var(--shadow2);
+  align-items:flex-end;
+  padding: clamp(26px, 5vw, 54px) 0;
   overflow:hidden;
 }
 
-.card-pad{padding:22px}
-
-.grid-3{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
-}
-@media (max-width: 980px){
-  .grid-3{grid-template-columns:1fr}
+.hero-bg{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.02);
 }
 
-.split{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap:22px;
-  align-items:stretch;
-}
-@media (max-width: 980px){
-  .split{grid-template-columns:1fr}
+/* overlay */
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(2,6,23,.76) 0%, rgba(2,6,23,.36) 55%, rgba(2,6,23,.20) 100%),
+    linear-gradient(180deg, rgba(2,6,23,.25) 0%, rgba(2,6,23,.55) 100%);
 }
 
-.chips{
+.hero-inner{
+  position:relative;
+  padding: var(--pad);
+  width: 100%;
+}
+
+.cta{
   display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-.chip{
-  padding:8px 12px;
-  border-radius:999px;
-  border:1px solid rgba(11,74,162,.18);
-  background:rgba(11,74,162,.05);
-  color:rgba(15,23,42,.82);
-  font-weight:650;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
-.footer{
-  padding:34px 0 50px;
-  color:rgba(15,23,42,.62);
-  border-top:1px solid var(--line);
+/* ---------- Cards / Panels ---------- */
+.panel{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: clamp(18px, 2.4vw, 26px);
 }
 
-/* =========================
-   EXTRA: if some images are still too tall
-   (force even tighter for all images inside cards)
-   ========================= */
-.card img{
-  max-height:420px;
+.grid{
+  display:grid;
+  gap: 18px;
 }
+
+.grid.cols-2{ grid-template-columns: 1.15fr .85fr; }
+.grid.cols-3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
+
+@media (max-width: 980px){
+  .grid.cols-2{ grid-template-columns: 1fr; }
+  .grid.cols-3{ grid-template-columns: 1fr; }
+  .navlinks{ display:none; } /* keep header clean on small screens */
+}
+
+/* ---------- Media (THIS FIXES YOUR OVERSIZED IMAGES) ---------- */
+/* Used in your HTML as: <div class="media"><img ...></div> */
+.media{
+  border-radius: var(--radius);
+  overflow:hidden;
+  background: #e9eef6;
+  box-shadow: var(--shadow-soft);
+
+  /* Key: constrain the height so GitHub-hosted images never "take over" */
+  aspect-ratio: 16 / 10;
+  max-height: 420px;
+  width: 100%;
+
+  /* allow internal img to fill */
+  display:block;
+}
+
+/* make <img> fill the .media box without stretching */
+.media > img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+  display:block;
+}
+
+/* For very wide hero-like media blocks: add class="media wide" in HTML if you want */
+.media.wide{
+  aspect-ratio: 21 / 9;
+  max-height: 360px;
+}
+
+/* For portrait images: add class="media portrait" in HTML if you want */
+.media.portrait{
+  aspect-ratio: 4 / 5;
+  max-height: 520px;
+}
+
+@media (max-width: 980px){
+  .media{ max-height: 320px; aspect-ratio: 4 / 3; }
+  .media.wide{ aspect-ratio: 16 / 9; max-height: 260px; }
+}
+
+/* ---------- Pills / chips ---------- */
+.pills{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(31,111,235,.22);
+  background: rgba(31,111,235,.06);
+  color: rgba(15,23,42,.88);
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* ---------- Lists ---------- */
+ul.clean{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.clean li{
+  display:flex;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed rgba(15,23,42,.12);
+}
+ul.clean li:last-child{ border-bottom:0; }
+
+/* ---------- Footer ---------- */
+footer{
+  padding: 28px 0 40px 0;
+  color: rgba(15,23,42,.60);
+  font-size: 13px;
+}
+
+/* ---------- Defensive fixes (stop "random default links/menus" from showing) ---------- */
+/* If any legacy nav duplicated lines appear, keep them tidy */
+nav a, .nav a{ text-decoration:none; }
