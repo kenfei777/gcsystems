@@ -1,205 +1,239 @@
-/* =========================================================
-   GCSystems Canada - Styles (GitHub Pages safe)
-   Fixes: oversized images, layout break, responsive nav/cards
-   ========================================================= */
+/* =========================
+   Global
+========================= */
 
-/* -------- Reset / base -------- */
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif;
-  line-height:1.6;
-  color:#0b1220;
-  background:#f4f6fb;
-}
-a{color:inherit;text-decoration:none}
-a:hover{text-decoration:none}
-img{max-width:100%;height:auto;display:block} /* safe global */
-
-/* -------- Layout helpers -------- */
-.container{width:min(1200px,92vw);margin:0 auto}
-.section{padding:72px 0}
-.card{
-  background:#fff;
-  border-radius:18px;
-  box-shadow:0 18px 48px rgba(10,20,40,.10);
-  border:1px solid rgba(15,23,42,.08);
-}
-.muted{color:rgba(11,18,32,.68)}
-.h1{font-size:clamp(34px,5vw,56px);line-height:1.05;letter-spacing:-.02em}
-.h2{font-size:clamp(22px,2.7vw,34px);line-height:1.15;letter-spacing:-.01em}
-.h3{font-size:18px;line-height:1.2}
-.p{font-size:16px}
-.kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:rgba(11,18,32,.62)}
-
-/* -------- Buttons -------- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  padding:12px 18px;border-radius:999px;
-  border:1px solid rgba(20,54,120,.18);
-  background:#fff;
-  font-weight:600;
-}
-.btn.primary{
-  background:linear-gradient(135deg,#0e4bb5,#0a2f7a);
-  color:#fff;border-color:transparent;
-  box-shadow:0 14px 30px rgba(10,47,122,.22);
-}
-.btn:hover{transform:translateY(-1px)}
-.btn:active{transform:translateY(0)}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:8px 12px;border-radius:999px;
-  border:1px solid rgba(20,54,120,.14);
-  background:#f7f9ff;
-  font-weight:600;color:rgba(11,18,32,.8);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* -------- Header / Nav -------- */
-header, .header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(244,246,251,.82);
-  backdrop-filter:saturate(180%) blur(10px);
-  border-bottom:1px solid rgba(15,23,42,.10);
-}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800}
-.brand .logo{
-  width:34px;height:34px;border-radius:10px;
-  background:linear-gradient(135deg,#0e4bb5,#0a2f7a);
-  box-shadow:0 10px 22px rgba(10,47,122,.18);
-}
-.brand img{max-height:34px;width:auto} /* prevent logo being affected */
-.navlinks{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
-.navlinks a{padding:10px 10px;border-radius:12px;font-weight:650;color:rgba(11,18,32,.78)}
-.navlinks a.active,.navlinks a:hover{background:rgba(14,75,181,.08);color:#0a2f7a}
-.nav-cta{display:flex;align-items:center;gap:10px}
-
-/* -------- Hero -------- */
-.hero{padding:40px 0 22px}
-.hero-grid{
-  display:grid;
-  grid-template-columns:1.15fr .85fr;
-  gap:22px;
-  align-items:stretch;
-}
-.hero-left{padding:48px 44px}
-.hero-right{padding:26px}
-.hero-left.card,.hero-right.card{border-radius:22px}
-
-/* If hero uses a big background image (recommended) */
-.hero-bg{
-  position:relative;
-  overflow:hidden;
-  min-height:340px;
-}
-.hero-bg::before{
-  content:"";
-  position:absolute;inset:0;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  filter:saturate(1.02) contrast(1.02);
-  transform:scale(1.02);
-}
-.hero-bg::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(90deg, rgba(0,0,0,.55), rgba(0,0,0,.12));
-}
-.hero-bg > *{position:relative;z-index:1}
-
-/* -------- Grids / sections -------- */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.stack{display:flex;flex-direction:column;gap:14px}
-.pad{padding:28px}
-.pad-lg{padding:44px}
-.sep{height:1px;background:rgba(15,23,42,.10);margin:18px 0}
-
-/* -------- Image sizing: IMPORTANT FIX --------
-   Force "cover" inside an aspect box so images never blow up layouts.
-*/
-.media, .image, .image-wrap, .image-card, .photo, .figure{
-  position:relative;
-  overflow:hidden;
-  border-radius:18px;
-  border:1px solid rgba(15,23,42,.08);
-  background:#eef2ff;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #1c1c1c;
+  background: #f4f6f9;
 }
 
-/* Default aspect for content images */
-.media, .image, .image-wrap, .image-card, .photo, .figure{
-  aspect-ratio: 4 / 3;
-  max-height: 520px; /* cap tall images */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Make the contained image fill the box */
-.media img,
-.image img,
-.image-wrap img,
-.image-card img,
-.photo img,
-.figure img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
+/* =========================
+   Header
+========================= */
+
+header {
+  background: white;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-/* Banner / hero images should be shorter */
-.banner, .hero-banner, .top-banner{
-  aspect-ratio: 16 / 6;
-  max-height: 360px;
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Prevent accidental gigantic standalone images */
-main img:not(.logo-img):not(.icon):not(.badge-icon){
-  max-height: 720px;
+nav ul {
+  display: flex;
+  gap: 28px;
+  list-style: none;
 }
 
-/* -------- Typography blocks -------- */
-.lead{font-size:18px;color:rgba(11,18,32,.76)}
-.small{font-size:14px;color:rgba(11,18,32,.70)}
-.ul{display:flex;flex-direction:column;gap:10px}
-.li{display:flex;gap:10px;align-items:flex-start}
-.dot{
-  width:10px;height:10px;border-radius:50%;
-  background:#0e4bb5;margin-top:7px;flex:0 0 auto;
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
 }
 
-/* -------- Forms / iframe (Google Form) -------- */
-iframe{width:100%;border:0}
-.form-embed{
-  border-radius:18px;
-  overflow:hidden;
-  border:1px solid rgba(15,23,42,.10);
-  background:#fff;
+nav a:hover {
+  color: #1f4fbf;
 }
 
-/* -------- Footer -------- */
-footer{padding:34px 0;color:rgba(11,18,32,.62)}
-footer .container{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+/* =========================
+   Buttons
+========================= */
 
-/* -------- Responsive -------- */
-@media (max-width: 980px){
-  .hero-grid{grid-template-columns:1fr}
-  .grid-3{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .hero-left{padding:34px 26px}
-  .pad-lg{padding:30px}
-  .navlinks{gap:8px}
-  .nav-cta .btn{padding:10px 14px}
-  .media, .image, .image-wrap, .image-card, .photo, .figure{max-height:420px}
-  .banner, .hero-banner, .top-banner{max-height:300px}
-}
-@media (max-width: 520px){
-  .section{padding:54px 0}
-  .hero{padding:26px 0 14px}
-  .btn{width:100%;justify-content:center}
-  .nav{align-items:flex-start}
-  .navlinks{width:100%}
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
-/* -------- Safety overrides -------- */
-img[width][height]{max-width:100%;height:auto} /* ignore hardcoded width/height */
+.btn-primary {
+  background: #1f4fbf;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #163c93;
+}
+
+.btn-outline {
+  border: 2px solid #1f4fbf;
+  color: #1f4fbf;
+}
+
+.btn-outline:hover {
+  background: #1f4fbf;
+  color: white;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(65%);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 44px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   Section
+========================= */
+
+section {
+  padding: 80px 0;
+}
+
+.section-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   Two Column Layout
+========================= */
+
+.two-col {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.two-col.reverse {
+  flex-direction: row-reverse;
+}
+
+.two-col-text {
+  flex: 1;
+}
+
+.two-col-image {
+  flex: 1;
+}
+
+/* =========================
+   IMAGE CONTROL (关键修改)
+========================= */
+
+/* 所有内容区图片统一高度 */
+.two-col-image img,
+.section-image img {
+  width: 100%;
+  height: 380px;          /* 控制图片高度 */
+  object-fit: cover;      /* 自动裁切，不拉伸 */
+  border-radius: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+}
+
+/* 如果有小图 */
+.small-image img {
+  height: 300px;
+}
+
+/* =========================
+   Cards
+========================= */
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  flex: 1;
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+  background: #0e1b2e;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .hero {
+    height: 420px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .two-col-image img,
+  .section-image img {
+    height: 280px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+}
