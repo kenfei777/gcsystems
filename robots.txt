@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://gcsystems.ca/sitemap.xml
+Sitemap: https://kenfei777.github.io/gcsystems/sitemap.xml
