@@ -471,3 +471,136 @@ p,li{ color:var(--muted) !important; }
   color: rgba(255,255,255,.86) !important;
   max-width: 72ch;
 }
+
+
+/* ===== V8 MASTER DESIGN SYSTEM (Unified) ===== */
+:root{
+  --bg:#F4F6F8;
+  --surface:#FFFFFF;
+  --ink:#1F2D3D;
+  --muted:#5C6B7A;
+  --line:#E3EAF3;
+
+  --brand:#2F5DFF;
+  --brand-deep:#1B4F9A;
+
+  --navbg: rgba(244,246,248,.92);
+}
+
+body{ background:var(--bg) !important; color:var(--ink) !important; }
+h1,h2,h3,h4,h5,h6{ color:var(--ink) !important; font-weight:650 !important; letter-spacing:-.01em; }
+p,li{ color:var(--muted) !important; line-height:1.65 !important; }
+
+/* Header */
+.site-header{
+  background:var(--navbg) !important;
+  border-bottom:1px solid var(--line) !important;
+  backdrop-filter: blur(14px);
+}
+.nav a{ color: rgba(31,45,61,.84) !important; }
+.nav a:hover{ background: rgba(47,93,255,.08) !important; }
+
+.nav a.nav-pill{
+  border-radius:999px !important;
+  border:1px solid rgba(47,93,255,.22) !important;
+  background:rgba(47,93,255,.06) !important;
+  color: rgba(31,45,61,.92) !important;
+  font-weight:650 !important;
+}
+.nav a.nav-pill.primary{
+  border:none !important;
+  color:#fff !important;
+  background: linear-gradient(135deg, #2F5DFF 0%, #1B4F9A 65%, #0E3A80 100%) !important;
+  box-shadow: 0 14px 32px rgba(47,93,255,.22) !important;
+}
+
+/* Buttons */
+.btn.primary{
+  border:none !important;
+  background: linear-gradient(135deg, #2F5DFF 0%, #1B4F9A 65%, #0E3A80 100%) !important;
+  box-shadow: 0 14px 32px rgba(47,93,255,.22) !important;
+}
+.btn.secondary{
+  background: rgba(255,255,255,.92) !important;
+  border:1px solid rgba(31,45,61,.14) !important;
+  color: rgba(31,45,61,.92) !important;
+}
+
+/* Cards */
+.card, .panel, .feature, .tile, .metric{
+  background:var(--surface) !important;
+  border:1px solid var(--line) !important;
+  box-shadow: 0 14px 34px rgba(16,24,40,.06) !important;
+  border-radius:18px !important;
+}
+
+/* MASTER page hero (inner pages) */
+.master-hero{
+  position: relative;
+  padding: 110px 0 72px;
+  background: var(--hero-img) center/cover no-repeat;
+  border-bottom: 1px solid var(--line);
+}
+.master-hero__overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(255,255,255,.74) 0%, rgba(255,255,255,.78) 55%, rgba(244,246,248,.92) 100%);
+  backdrop-filter: blur(2px);
+}
+.master-hero__inner{ position:relative; z-index:2; }
+.master-hero__label{
+  display:inline-flex;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+  color: rgba(47,93,255,.95);
+  background: rgba(47,93,255,.10);
+  border: 1px solid rgba(47,93,255,.18);
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.master-hero__title{
+  font-size: clamp(38px, 4.2vw, 56px);
+  line-height: 1.02;
+  margin: 0 0 12px;
+}
+.master-hero__subtitle{
+  max-width: 70ch;
+  margin: 0;
+  font-size: 18px;
+  color: rgba(31,45,61,.82) !important;
+}
+
+/* Remove old dark bands if any */
+.band, .strip, .hero-strip, .callout-bar{
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
+}
+.band *, .strip *{ color: inherit !important; }
+
+@media (max-width: 860px){
+  .master-hero{ padding: 86px 0 54px; }
+  .nav a.nav-pill{ display:none !important; }
+}
+
+
+/* ===== V8.1 Media Placeholder Alignment (light, consistent) ===== */
+.media-card{
+  background:#FFFFFF !important;
+  border:1px solid var(--line) !important;
+  box-shadow: 0 14px 34px rgba(16,24,40,.06) !important;
+}
+.media-card::before{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.35) 60%, rgba(244,246,248,.85) 100%),
+    var(--img, url("assets/placeholder-1.jpg")) !important;
+  background-size:cover !important;
+  background-position:center !important;
+  filter:saturate(1.05) brightness(1.05);
+}
+.media-card .label{
+  background:rgba(255,255,255,.92) !important;
+  border:1px solid rgba(31,45,61,.14) !important;
+  color:rgba(31,45,61,.85) !important;
+}
