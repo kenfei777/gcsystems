@@ -251,3 +251,62 @@ textarea{min-height:140px;resize:vertical}
   .hero h1{font-size:40px}
   .hero .subtitle{font-size:18px}
 }
+
+
+/* ===== V6 Light Theme Override (brighter, medical B2B) ===== */
+:root{
+  --ink:#0F1B2A;
+  --muted:#536579;
+  --soft:#F6F8FB;
+  --card:#FFFFFF;
+  --line:#E6ECF2;
+  --brand:#0F2A44;   /* deep blue accent */
+  --brand2:#1F6F5B;  /* optional green accent */
+}
+body{background:#fff !important;color:var(--ink) !important;}
+/* Header/nav: brighten */
+.site-header{
+  background: rgba(255,255,255,.88) !important;
+  border-bottom: 1px solid var(--line) !important;
+  backdrop-filter: blur(10px);
+}
+.site-header::before{display:none !important;}
+.nav a{color: rgba(15,27,42,.86) !important;}
+.nav a:hover{background: rgba(15,27,42,.06) !important;}
+.nav .cta{
+  background: rgba(15,42,68,.06) !important;
+  border: 1px solid rgba(15,42,68,.14) !important;
+  color: var(--ink) !important;
+}
+/* Hero */
+.hero{background:#fff !important;}
+.hero .subtitle{color: rgba(15,27,42,.70) !important;}
+/* Buttons */
+.btn.primary{
+  background: var(--brand) !important;
+  color:#fff !important;
+  border: 1px solid rgba(15,42,68,.18) !important;
+}
+.btn.secondary{
+  background:#fff !important;
+  color: var(--ink) !important;
+  border: 1px solid var(--line) !important;
+}
+/* Cards / panels */
+.card, .pill, .feature, .panel, .feature-card, .metric, .tile{
+  background: var(--card) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: 0 10px 30px rgba(15,27,42,.06) !important;
+}
+/* Any dark bands -> light */
+.band, .strip, .bar, .subbar, .hero-strip, .callout-bar{
+  background: var(--soft) !important;
+  color: var(--ink) !important;
+  border-top: 1px solid var(--line) !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+/* Footer: less harsh */
+.footer{
+  background: #0F1B2A !important;
+  color: rgba(255,255,255,.92) !important;
+}
