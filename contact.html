@@ -1,52 +1,121 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCSystems | Contact</title>
+  <meta name="description" content="Partner enquiries for trial orders and supply discussions. Confidential and practical." />
+  <meta name="theme-color" content="#0F1B2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-overlay">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="GCSystems Logo">
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="platform.html">Our Platform</a>
-        <a href="programs.html">Programs</a>
-        <a href="supply.html">Supply & Partnering</a>
-        <a href="australia.html">Australia Presence</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="GCSystems Home">
+      <img src="assets/logo.png" alt="GCSystems logo" />
+    </a>
 
-    <div class="container hero">
-      <h1>Canadian Medical Cannabis Producer</h1>
-      <h2>Reliable, Trial-Friendly Flower Supply for Australian Distributors</h2>
-      <a class="btn primary" href="contact.html">Partner Enquiry</a>
-      <a class="btn secondary" href="supply.html">Discuss Supply</a>
-    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Our Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply &amp; Partnering</a>
+      <a href="australia.html">Australia Presence</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" data-open="false">
+    <a href="index.html">Home</a>
+    <a href="platform.html">Our Platform</a>
+    <a href="programs.html">Programs</a>
+    <a href="supply.html">Supply &amp; Partnering</a>
+    <a href="australia.html">Australia Presence</a>
+    <a class="btn primary" href="contact.html">Partner Enquiry</a>
   </div>
 </header>
 
+
 <main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">CONTACT</span>
+      <h1 class="title">Partner Enquiries</h1>
+      <p class="lead sub">
+        For supply discussions or trial enquiries, please contact us using the form below. All conversations are handled confidentially.
+      </p>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container">
-<h2>Content Placeholder</h2>
-<p>Full professional content remains as previously structured. This update focuses on Hero redesign per instruction.</p>
-</div>
-</section>
+  <section class="section">
+    <div class="container grid-12">
+      <article class="card pad-lg col-6">
+        <h2 style="margin-top:0">Partner Enquiry Form</h2>
+        <p>
+          This is a placeholder form. When you’re ready, replace it with your Google Forms link (recommended) or a form endpoint.
+        </p>
 
+        <form class="form" action="#" method="post" onsubmit="event.preventDefault(); alert('Connect this form to Google Forms later.');">
+          <div class="form-row">
+            <input class="input" name="name" placeholder="Name" required />
+            <input class="input" name="company" placeholder="Company" required />
+          </div>
+          <div class="form-row">
+            <input class="input" type="email" name="email" placeholder="Email" required />
+            <input class="input" name="role" placeholder="Role (Distributor / Wholesaler / Manufacturer)" />
+          </div>
+          <input class="input" name="interest" placeholder="Interest (Trial order / Ongoing supply / Specific profiles)" />
+          <textarea name="message" placeholder="Briefly describe your needs (target profiles, volume range, timing, format)…"></textarea>
+          <button class="btn primary" type="submit">Submit Enquiry</button>
+        </form>
+
+        <div class="badge-row">
+          <a class="btn secondary" href="supply.html">Discuss Supply</a>
+          <a class="btn secondary" href="programs.html">View Programs</a>
+        </div>
+      </article>
+
+      <article class="card pad-lg col-6" style="background:var(--soft)">
+        <h2 style="margin-top:0">Confidential discussions</h2>
+        <p>We keep initial conversations practical and focused:</p>
+        <ul>
+          <li>What your portfolio needs</li>
+          <li>Trial shipment structure</li>
+          <li>Documentation expectations</li>
+          <li>Timelines and next steps</li>
+        </ul>
+        <p class="note">Replace this section later with phone, email, or an embedded Google Form/Calendly if desired.</p>
+      </article>
+    </div>
+  </section>
 </main>
+
+
 <footer class="footer">
-  GCSystems © 2026
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">GCSystems</div>
+      <div class="footer-sub">Canadian Medical Cannabis Production Platform</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply</a>
+      <a href="australia.html">Australia</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </footer>
+
 <script src="main.js"></script>
 </body>
 </html>

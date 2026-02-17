@@ -1,52 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Australia Presence</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCSystems | Australia Presence</title>
+  <meta name="description" content="Building long-term partnerships in Australia via HealthEssence with aligned ownership and execution." />
+  <meta name="theme-color" content="#0F1B2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-overlay">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">
-        <img src="assets/logo.png" alt="GCSystems Logo">
-      </a>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="platform.html">Our Platform</a>
-        <a href="programs.html">Programs</a>
-        <a href="supply.html">Supply & Partnering</a>
-        <a href="australia.html">Australia Presence</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </div>
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="GCSystems Home">
+      <img src="assets/logo.png" alt="GCSystems logo" />
+    </a>
 
-    <div class="container hero">
-      <h1>Canadian Medical Cannabis Producer</h1>
-      <h2>Reliable, Trial-Friendly Flower Supply for Australian Distributors</h2>
-      <a class="btn primary" href="contact.html">Partner Enquiry</a>
-      <a class="btn secondary" href="supply.html">Discuss Supply</a>
-    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Our Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply &amp; Partnering</a>
+      <a href="australia.html">Australia Presence</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" data-open="false">
+    <a href="index.html">Home</a>
+    <a href="platform.html">Our Platform</a>
+    <a href="programs.html">Programs</a>
+    <a href="supply.html">Supply &amp; Partnering</a>
+    <a href="australia.html">Australia Presence</a>
+    <a class="btn primary" href="contact.html">Partner Enquiry</a>
   </div>
 </header>
 
+
 <main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">AUSTRALIA PRESENCE</span>
+      <h1 class="title">Building Long-Term Partnerships in Australia</h1>
+      <p class="lead sub">
+        Australia is an active expansion market for us. HealthEssence is our Australian entity operating under the same ownership and management structure. This ensures alignment between production capability and local commercial execution as we build distribution relationships in Australia.
+      </p>
+    </div>
+  </section>
 
-<section class="section">
-<div class="container">
-<h2>Content Placeholder</h2>
-<p>Full professional content remains as previously structured. This update focuses on Hero redesign per instruction.</p>
-</div>
-</section>
+  <section class="section">
+    <div class="container split">
+      <article class="card pad-lg">
+        <h2 style="margin-top:0">Local execution, aligned ownership</h2>
+        <p>
+          Our approach is to build professional distribution relationships with clarity on compliance, documentation, and practical supply structures—starting with trial-friendly entry.
+        </p>
+        <ul>
+          <li>Australian-market coordination through HealthEssence</li>
+          <li>Aligned ownership and management</li>
+          <li>Structured supply discussions with confidentiality</li>
+        </ul>
+        <div class="actions">
+          <a class="btn primary" href="contact.html">Partner Enquiry</a>
+          <a class="btn secondary" href="supply.html">Discuss Supply</a>
+        </div>
+      </article>
 
+      <div class="media-card" style="--img:url('assets/australia.jpg')">
+        <div class="label">Image placeholder — replace <strong>assets/australia.jpg</strong></div>
+      </div>
+    </div>
+  </section>
 </main>
+
+
 <footer class="footer">
-  GCSystems © 2026
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">GCSystems</div>
+      <div class="footer-sub">Canadian Medical Cannabis Production Platform</div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="platform.html">Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply</a>
+      <a href="australia.html">Australia</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </footer>
+
 <script src="main.js"></script>
 </body>
 </html>
