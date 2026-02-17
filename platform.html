@@ -1,97 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Platform | GCSystems Canada</title>
-  <meta name="description" content="Genetics-led platform, controlled cultivation, and post-harvest standards designed for regulated medical markets." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCSystems | Our Platform</title>
+  <meta name="description" content="Built on genetics and controlled cultivation for regulated medical markets." />
+  <meta name="theme-color" content="#0F1B2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="brand" href="index.html"><span class="brand-badge" aria-hidden="true"></span><span>GCSystems Canada</span></a>
-      <nav class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a class="active" href="platform.html">Our Platform</a>
-        <a href="programs.html">Programs</a>
-        <a href="supply.html">Supply &amp; Partnering</a>
-        <a href="australia.html">Australia</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="btn ghost" href="programs.html">View Programs</a>
-        <a class="btn primary" href="contact.html">Partner Enquiry</a>
-        <button class="burger" data-burger aria-label="Open menu">Menu</button>
-      </div>
-    </div>
-    <div class="wrap mobile" data-mobile>
-      <a href="index.html">Home</a>
-      <a class="active" href="platform.html">Our Platform</a>
-      <a href="programs.html">Programs</a>
-      <a href="supply.html">Supply &amp; Partnering</a>
-      <a href="australia.html">Australia</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </header>
 
-  <section class="hero" style="min-height:0">
-    <div class="hero-bg" style="background-image:url('https://unsplash.com/photos/ceBQUO9Sxz8/download?force=true');"></div>
-    <div class="wrap hero-inner" style="padding:58px 0 46px">
-      <div class="kicker">PLATFORM</div>
-      <div class="h1" style="font-size:44px">Genetics, craft standards, and disciplined execution</div>
-      <div class="sub">A practical platform built to support repeatability, compliance, and scalable supply.</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="GCSystems Home">
+      <img src="assets/logo.png" alt="GCSystems logo" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="platform.html">Our Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply & Partnering</a>
+      <a href="australia.html">Australia Presence</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" data-open="false">
+    <a href="platform.html">Our Platform</a>
+    <a href="programs.html">Programs</a>
+    <a href="supply.html">Supply & Partnering</a>
+    <a href="australia.html">Australia Presence</a>
+    <a class="btn primary" href="contact.html">Partner Enquiry</a>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">OUR PLATFORM</span>
+      <h1 class="title">Built on Genetics and Controlled Cultivation</h1>
+      <p class="lead sub">
+        Our platform combines long-developed genetic assets with disciplined cultivation execution. Because breeding and genetic selection have been developed internally over many years, we are not constrained by external sourcing or narrow strain rotations.
+      </p>
     </div>
   </section>
 
-  <main>
-    <section class="section">
-      <div class="wrap grid three">
-        <div class="card pad">
-          <h3>In‑house genetics</h3>
-          <p class="muted">Owned and managed genetics library, with selection and stabilisation to support consistent phenotype outcomes over time.</p>
-        </div>
-        <div class="card pad">
-          <h3>Controlled cultivation</h3>
-          <p class="muted">Environmental control, scheduling discipline, and QA checkpoints designed around regulated market expectations.</p>
-        </div>
-        <div class="card pad">
-          <h3>Defined post‑harvest</h3>
-          <p class="muted">Documented standards across drying, curing, trimming, and storage to preserve product quality and reduce variance.</p>
-        </div>
-      </div>
-    </section>
+  <section class="section">
+    <div class="container split">
+      <div class="card pad-lg">
+        <h2 style="margin-top:0">What we maintain</h2>
+        <ul>
+          <li>A broad stabilised cultivar base developed through long-term selection</li>
+          <li>Active breeding capability</li>
+          <li>Ongoing phenotype refinement across cycles</li>
+          <li>The flexibility to respond to defined market requirements</li>
+        </ul>
 
-    <section class="section">
-      <div class="wrap grid two">
-        <div class="card pad">
-          <h3>Quality mindset</h3>
-          <p class="muted">We design for repeatability: stable inputs, disciplined process, and measurable outputs. This helps distributors reduce portfolio risk and support long‑term supply programs.</p>
-          <div class="pills">
-            <span class="pill">SOP Discipline</span>
-            <span class="pill">Batch Consistency</span>
-            <span class="pill">Regulated Market Fit</span>
-          </div>
-        </div>
-        <div class="media">
-          <img alt="Pharmaceutical packaging" src="https://unsplash.com/photos/FDvArkoGyvI/download?force=true" />
-        </div>
-      </div>
-    </section>
+        <h2 style="margin-top:28px">Built for regulated medical markets</h2>
+        <ul>
+          <li>Stable genetic expression</li>
+          <li>Terpene integrity</li>
+          <li>Defined post-harvest standards</li>
+        </ul>
 
-    <section class="section">
-      <div class="wrap card pad">
-        <h3>Want the platform pack?</h3>
-        <p class="muted">If you’re evaluating supply programs or trial volumes, we can share a concise overview and proposed trial pathway.</p>
-        <div class="cta" style="margin-top:10px">
-          <a class="btn primary" href="contact.html">Partner Enquiry</a>
-          <a class="btn" href="supply.html">Supply &amp; Partnering</a>
-        </div>
+        <p class="note">Structured harvest cycles support both trial volumes and ongoing supply with dependable continuity.</p>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer"><div class="wrap">© GCSystems Canada. Images via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</div></footer>
-  <script src="main.js"></script>
+      <div class="media-card" style="--img:url('assets/platform.jpg')">
+        <div class="label">Image placeholder — replace <strong>assets/platform.jpg</strong></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">GCSystems</div>
+      <div class="footer-sub">Canadian Medical Cannabis Production Platform</div>
+    </div>
+    <div class="footer-links">
+      <a href="platform.html">Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply</a>
+      <a href="australia.html">Australia</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>

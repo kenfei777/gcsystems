@@ -1,72 +1,118 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Partner Enquiry | GCSystems Canada</title>
-  <meta name="description" content="Partner enquiry form for wholesale partnership, import collaboration, or clinical supply discussions." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCSystems | Contact</title>
+  <meta name="description" content="Partner enquiries for trial orders and supply discussions. Confidential and practical." />
+  <meta name="theme-color" content="#0F1B2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="brand" href="index.html"><span class="brand-badge" aria-hidden="true"></span><span>GCSystems Canada</span></a>
-      <nav class="navlinks" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="platform.html">Our Platform</a>
-        <a href="programs.html">Programs</a>
-        <a href="supply.html">Supply &amp; Partnering</a>
-        <a href="australia.html">Australia</a>
-        <a class="active" href="contact.html">Contact</a>
-      </nav>
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="btn ghost" href="programs.html">View Programs</a>
-        <a class="btn primary" href="contact.html">Partner Enquiry</a>
-        <button class="burger" data-burger aria-label="Open menu">Menu</button>
-      </div>
-    </div>
-    <div class="wrap mobile" data-mobile>
-      <a href="index.html">Home</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html" aria-label="GCSystems Home">
+      <img src="assets/logo.png" alt="GCSystems logo" />
+    </a>
+
+    <nav class="nav" aria-label="Primary">
       <a href="platform.html">Our Platform</a>
       <a href="programs.html">Programs</a>
-      <a href="supply.html">Supply &amp; Partnering</a>
-      <a href="australia.html">Australia</a>
-      <a class="active" href="contact.html">Contact</a>
-    </div>
-  </header>
+      <a href="supply.html">Supply & Partnering</a>
+      <a href="australia.html">Australia Presence</a>
+      <a href="contact.html" class="cta">Contact</a>
+    </nav>
 
-  <section class="section">
-    <div class="wrap grid two">
-      <div class="card pad">
-        <h3>Partner Enquiry Form</h3>
-        <p class="muted">For supply discussions or trial enquiries, complete the form below. We typically respond within 24–48 hours.</p>
-        <div class="media" style="margin-top:14px">
-          <iframe class="form-frame" src="https://docs.google.com/forms/d/e/1FAIpQLSc5DK8HyPe5Ab-dDuziAgCnGzX7fM75I-2SSw2rg5Z8ygblWg/viewform?embedded=true" loading="lazy">Loading…</iframe>
-        </div>
-        <p class="muted" style="margin-top:12px">All conversations are handled confidentially.</p>
-      </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 
-      <div class="grid" style="gap:18px">
-        <div class="card pad">
-          <h3>Discuss supply</h3>
-          <p class="muted">Include partner type, intended positioning, and expected trial volume.</p>
-          <div class="cta" style="margin-top:10px">
-            <a class="btn primary" href="programs.html">View Programs</a>
-            <a class="btn" href="supply.html">Supply &amp; Partnering</a>
-          </div>
-        </div>
-        <div class="media">
-          <img alt="Cultivation" src="https://unsplash.com/photos/MuXSqrb8DyQ/download?force=true" />
-        </div>
-        <div class="card pad">
-          <h3>Tip: turn off email collection</h3>
-          <p class="muted">Google Form → Settings → Responses → “Collect email addresses” → set to “Do not collect”. (Also ensure “Require sign-in” is OFF.)</p>
-        </div>
-      </div>
+  <div class="mobile-nav" data-open="false">
+    <a href="platform.html">Our Platform</a>
+    <a href="programs.html">Programs</a>
+    <a href="supply.html">Supply & Partnering</a>
+    <a href="australia.html">Australia Presence</a>
+    <a class="btn primary" href="contact.html">Partner Enquiry</a>
+  </div>
+</header>
+
+
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <span class="kicker">CONTACT</span>
+      <h1 class="title">Partner Enquiries</h1>
+      <p class="lead sub">
+        For supply discussions or trial enquiries, please contact us using the form below. All conversations are handled confidentially.
+      </p>
     </div>
   </section>
 
-  <footer class="footer"><div class="wrap">© GCSystems Canada. Images via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</div></footer>
-  <script src="main.js"></script>
+  <section class="section">
+    <div class="container grid-12">
+      <article class="card pad-lg col-6">
+        <h2 style="margin-top:0">Partner Enquiry Form</h2>
+        <p>
+          This is a placeholder form. When you’re ready, replace it with your Google Forms link (recommended) or a form endpoint.
+        </p>
+
+        <form class="form" action="#" method="post" onsubmit="event.preventDefault(); alert('Connect this form to Google Forms later.');">
+          <div class="form-row">
+            <input class="input" name="name" placeholder="Name" required />
+            <input class="input" name="company" placeholder="Company" required />
+          </div>
+          <div class="form-row">
+            <input class="input" type="email" name="email" placeholder="Email" required />
+            <input class="input" name="role" placeholder="Role (Distributor / Wholesaler / Manufacturer)" />
+          </div>
+          <input class="input" name="interest" placeholder="Interest (Trial order / Ongoing supply / Specific profiles)" />
+          <textarea name="message" placeholder="Briefly describe your needs (target profiles, volume range, timing, format)…"></textarea>
+          <button class="btn primary" type="submit">Submit Enquiry</button>
+        </form>
+
+        <div class="badge-row">
+          <a class="btn secondary" href="supply.html">Discuss Supply</a>
+          <a class="btn secondary" href="programs.html">View Programs</a>
+        </div>
+      </article>
+
+      <article class="card pad-lg col-6" style="background:var(--soft)">
+        <h2 style="margin-top:0">Confidential discussions</h2>
+        <p>We keep initial conversations practical and focused:</p>
+        <ul>
+          <li>What your portfolio needs</li>
+          <li>Trial shipment structure</li>
+          <li>Documentation expectations</li>
+          <li>Timelines and next steps</li>
+        </ul>
+        <p class="note">Replace this section later with phone, email, or an embedded Google Form/Calendly if desired.</p>
+      </article>
+    </div>
+  </section>
+</main>
+
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div>
+      <div class="footer-brand">GCSystems</div>
+      <div class="footer-sub">Canadian Medical Cannabis Production Platform</div>
+    </div>
+    <div class="footer-links">
+      <a href="platform.html">Platform</a>
+      <a href="programs.html">Programs</a>
+      <a href="supply.html">Supply</a>
+      <a href="australia.html">Australia</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
 </body>
 </html>
