@@ -1,119 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GCSystems Canada | Canadian Medical Cannabis Producer</title>
-  <meta name="description" content="Reliable, trial-friendly flower supply for Australian distributors. Genetics-led cultivation, defined post-harvest standards, and flexible allocation." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GCSystems | Canadian Medical Cannabis Production Platform</title>
+  <meta name="description" content="Canadian medical cannabis production platform. Reliable, trial-friendly flower supply for Australian distributors—built for regulated markets." />
+  <meta property="og:title" content="GCSystems | Canadian Medical Cannabis Production Platform" />
+  <meta property="og:description" content="Reliable, trial-friendly flower supply for Australian distributors—built for regulated markets." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0F1B2A" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="GCSystems Canada">
-        <span class="brand-badge" aria-hidden="true"></span>
-        <span>GCSystems Canada</span>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="GCSystems Home">
+        <img class="brand-logo" src="assets/logo.png" alt="GCSystems logo" />
       </a>
 
-      <nav class="navlinks" aria-label="Primary">
-        <a class="active" href="index.html">Home</a>
-        <a href="platform.html">Our Platform</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="platform.html">Platform</a>
+        <a href="supply.html">Supply</a>
         <a href="programs.html">Programs</a>
-        <a href="supply.html">Supply &amp; Partnering</a>
         <a href="australia.html">Australia</a>
-        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Partner Enquiry</a>
       </nav>
 
-      <div style="display:flex;gap:10px;align-items:center">
-        <a class="btn ghost" href="programs.html">View Programs</a>
-        <a class="btn primary" href="contact.html">Partner Enquiry</a>
-        <button class="burger" data-burger aria-label="Open menu">Menu</button>
-      </div>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <div class="wrap mobile" data-mobile>
-      <a class="active" href="index.html">Home</a>
-      <a href="platform.html">Our Platform</a>
+    <div class="mobile-nav" data-mobile-nav>
+      <a href="platform.html">Platform</a>
+      <a href="supply.html">Supply</a>
       <a href="programs.html">Programs</a>
-      <a href="supply.html">Supply &amp; Partnering</a>
       <a href="australia.html">Australia</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="btn btn-primary">Partner Enquiry</a>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-bg" style="background-image:url('https://unsplash.com/photos/MuXSqrb8DyQ/download?force=true');"></div>
-    <div class="wrap hero-inner">
-      <div class="kicker">CANADIAN MEDICAL CANNABIS PRODUCER</div>
-      <div class="h1">Reliable, Trial‑Friendly Flower Supply<br/>for Australian Distributors</div>
-      <div class="sub">We are expanding into Australia and actively working with distributors and wholesalers seeking stable, high‑quality supply — starting with practical trial orders.</div>
-      <div class="cta">
-        <a class="btn primary" href="contact.html">Partner Enquiry</a>
-        <a class="btn" href="supply.html">Discuss Supply</a>
-      </div>
-    </div>
-  </section>
-
   <main>
-    <section class="section">
-      <div class="wrap grid two">
-        <div class="card pad">
-          <h3>Built for regulated medical markets</h3>
-          <p class="muted">In‑house genetics, controlled cultivation, and defined post‑harvest standards — focused on repeatability and integrity.</p>
-          <div class="pills">
-            <span class="pill">In‑House Genetics</span>
-            <span class="pill">Controlled Cultivation</span>
-            <span class="pill">Flexible Allocation</span>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Canadian Medical Cannabis Producer</p>
+          <h1>Built for regulated markets.<br/>Structured for reliable supply.</h1>
+          <p class="lead">
+            Reliable, trial-friendly flower supply for Australian distributors—produced within Canada’s federally regulated medical framework.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="contact.html">Discuss Supply</a>
+            <a class="btn btn-secondary" href="#why">Why Work With Us</a>
+          </div>
+
+          <div class="hero-metrics" role="list" aria-label="Key signals">
+            <div class="metric" role="listitem">
+              <div class="metric-kicker">Regulatory Discipline</div>
+              <div class="metric-text">Documented batch processes & controlled environments</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric-kicker">Trial-Friendly</div>
+              <div class="metric-text">Start modest, scale when fit is proven</div>
+            </div>
+            <div class="metric" role="listitem">
+              <div class="metric-kicker">Genetic Capability</div>
+              <div class="metric-text">Internal breeding direction & stabilised selections</div>
+            </div>
           </div>
         </div>
-        <div class="media">
-          <img alt="Cannabis cultivation" src="https://unsplash.com/photos/ceBQUO9Sxz8/download?force=true" />
+
+        <div class="hero-media" aria-label="Indoor cultivation facility image">
+          <!-- REAL-PHOTO HERO IMAGE (external). Replace with a local asset anytime. -->
+          <img
+            src="https://images.unsplash.com/photo-1585155770447-2f66e2a397b5?auto=format&fit=crop&w=2200&q=80"
+            alt="Clean, commercial indoor cultivation facility under white LED lighting"
+            loading="eager"
+          />
+          <div class="hero-media-scrim" aria-hidden="true"></div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap grid three">
-        <div class="card pad">
-          <h3>Product integrity</h3>
-          <div class="feature"><span class="dot"></span><div class="muted">Defined SOPs across cultivation, drying, trimming, and storage to support consistent batch outcomes.</div></div>
+    <!-- TRUST BAND -->
+    <section class="trust-band">
+      <div class="container trust-inner">
+        <div class="trust-left">Operating within Canada’s Federal Regulatory System</div>
+        <div class="trust-right">Structured for Consistent International Supply</div>
+      </div>
+    </section>
+
+    <!-- WHY WORK WITH US -->
+    <section class="why" id="why">
+      <div class="container">
+        <h2>Why Work with Us</h2>
+        <p class="why-lead">
+          Australia’s medical cannabis market demands three things: <strong>product integrity</strong>, <strong>consistency</strong>, and <strong>supply you can rely on</strong>.
+          We’ve built production discipline in Canada’s regulated medical system, and we’re making that capability available to Australian distributors—without unnecessary barriers to getting started.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>1) In-House Genetic Capability</h3>
+            <p>
+              Genetics are owned and managed within our production platform. Our breeding and seed development program operates under long-standing leadership with decades of cultivation and genetic experience.
+            </p>
+            <ul>
+              <li>Select stabilised cultivars matched to market needs</li>
+              <li>Maintain profile consistency across production cycles</li>
+              <li>Offer access beyond a fixed catalogue</li>
+              <li>Develop tailored selections when appropriate</li>
+            </ul>
+            <p class="card-note">We treat genetics as a long-term production asset—not a short-term strain rotation.</p>
+          </article>
+
+          <article class="card">
+            <h3>2) Controlled Cultivation & Craft Standards</h3>
+            <p>
+              Cultivation direction remains under experienced technical leadership, ensuring continuity in genetic expression and production discipline. Flower is slow hang-dried, hand-trimmed, and slow-cured under defined parameters.
+            </p>
+            <ul>
+              <li>Moisture-controlled for stability and terpene integrity</li>
+              <li>Allocated on fresh production cycles</li>
+              <li>Hybrid greenhouse + indoor environments for stability & hygiene</li>
+            </ul>
+            <p class="card-note">Result: clean, terpene-preserved flower with dependable batch-to-batch performance.</p>
+          </article>
+
+          <article class="card">
+            <h3>3) Flexible Allocation</h3>
+            <p>
+              New relationships often begin with modest volumes. We are comfortable starting with trial shipments and initial placements, then scaling with structure.
+            </p>
+            <ul>
+              <li>No rigid minimum threshold to begin</li>
+              <li>Trial → portfolio placement → scale-up</li>
+              <li>Structured longer-term supply when aligned</li>
+            </ul>
+            <p class="card-note">Make it easy to start—and easy to scale if the fit is right.</p>
+          </article>
         </div>
-        <div class="card pad">
-          <h3>Consistency</h3>
-          <div class="feature"><span class="dot"></span><div class="muted">Genetics‑led selection and stable production discipline to minimise variance and de‑risk supply programs.</div></div>
-        </div>
-        <div class="card pad">
-          <h3>Supply you can rely on</h3>
-          <div class="feature"><span class="dot"></span><div class="muted">Trial‑friendly pathways and scalable allocation for distributors building category depth.</div></div>
+
+        <div class="who">
+          <div class="who-copy">
+            <h3>Who We Work With</h3>
+            <p>We work with Australian distributors, wholesalers, and licensed manufacturers. If you are evaluating additional supply options, we’d be pleased to understand your needs and explore alignment.</p>
+          </div>
+          <div class="who-actions">
+            <a class="btn btn-primary" href="contact.html">Partner Enquiry</a>
+            <a class="btn btn-secondary" href="supply.html">View Supply Models</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="wrap grid two">
-        <div class="media">
-          <img alt="Medical cannabis flower" src="https://unsplash.com/photos/_OtpJET8rBs/download?force=true" />
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="container final-inner">
+        <div>
+          <h2>Discuss Supply Structure</h2>
+          <p>Trial-supported entry. Tiered catalogue structure. Documentation-ready coordination for regulated pathways.</p>
         </div>
-        <div class="card pad">
-          <h3>Start with a practical trial</h3>
-          <p class="muted">If you’re assessing genetics fit, patient response, or portfolio positioning, we can structure sensible trial volumes and follow‑on supply planning.</p>
-          <div class="pills">
-            <span class="pill">Trial Volumes</span>
-            <span class="pill">Tiered SKU Options</span>
-            <span class="pill">Portfolio Mapping</span>
-          </div>
-          <div class="cta" style="margin-top:18px">
-            <a class="btn primary" href="contact.html">Enquire</a>
-            <a class="btn" href="programs.html">See Programs</a>
-          </div>
+        <div class="final-actions">
+          <a class="btn btn-primary" href="contact.html">Partner Enquiry</a>
+          <a class="btn btn-secondary" href="australia.html">Australia Readiness</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap">
-      <div>© GCSystems Canada. Images via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</div>
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-brand">GCSystems</div>
+        <div class="footer-sub">Canadian Medical Cannabis Production Platform</div>
+      </div>
+      <div class="footer-links">
+        <a href="platform.html">Platform</a>
+        <a href="supply.html">Supply</a>
+        <a href="programs.html">Programs</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </div>
   </footer>
 
