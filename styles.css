@@ -334,3 +334,108 @@ p, li{
 .section-title{
   color:#1A2736 !important;
 }
+
+
+/* ===== V7 Final Theme (matches approved screenshot) ===== */
+:root{
+  --bg:#F3F6FB;
+  --surface:#FFFFFF;
+  --ink:#1F2B3A;         /* softer than black */
+  --muted:#5F6F84;
+  --line:#E3EAF3;
+  --navbg:rgba(243,246,251,.92);
+  --brand:#1B4F9A;       /* cobalt blue */
+  --brand2:#0F2A44;      /* deep navy */
+}
+
+body{
+  background:var(--bg) !important;
+  color:var(--ink) !important;
+}
+
+h1,h2,h3,h4,h5,h6{ color:#1C2736 !important; font-weight:650 !important; letter-spacing:-.01em; }
+p,li{ color:var(--muted) !important; }
+
+/* Header: light, airy */
+.site-header{
+  background:var(--navbg) !important;
+  border-bottom:1px solid var(--line) !important;
+  backdrop-filter: blur(14px);
+}
+.brand img{ height:34px !important; width:auto; }
+.nav{ gap:18px !important; align-items:center; }
+.nav a{
+  color:rgba(31,43,58,.82) !important;
+  padding:10px 12px !important;
+  border-radius:12px !important;
+}
+.nav a:hover{ background:rgba(27,79,154,.08) !important; }
+.nav a.cta{ display:none !important; } /* replace old CTA */
+.nav a.nav-pill{
+  padding:12px 18px !important;
+  border-radius:999px !important;
+  border:1px solid rgba(27,79,154,.22) !important;
+  background:rgba(27,79,154,.06) !important;
+  color:rgba(31,43,58,.92) !important;
+  font-weight:600 !important;
+}
+.nav a.nav-pill.primary{
+  border:none !important;
+  color:#fff !important;
+  background: linear-gradient(135deg, #1B4F9A 0%, #0E3A80 60%, #0A2E66 100%) !important;
+  box-shadow: 0 12px 28px rgba(27,79,154,.25) !important;
+}
+
+/* Hero: approved grey gradient with white text */
+.hero{
+  background: linear-gradient(180deg, #6B707A 0%, #9AA0AA 45%, #E6EAF1 100%) !important;
+  color: rgba(255,255,255,.92) !important;
+  padding-top:72px !important;
+  padding-bottom:58px !important;
+}
+.hero h1{ color:#fff !important; }
+.hero .subtitle{ color: rgba(255,255,255,.88) !important; }
+.hero .lead{ color: rgba(255,255,255,.82) !important; max-width: 58ch; }
+
+/* Hero buttons: match pill style */
+.hero .btn.primary{
+  border:none !important;
+  background: linear-gradient(135deg, #1B4F9A 0%, #0E3A80 60%, #0A2E66 100%) !important;
+  box-shadow: 0 12px 28px rgba(27,79,154,.28) !important;
+}
+.hero .btn.secondary{
+  background: rgba(255,255,255,.85) !important;
+  border: 1px solid rgba(255,255,255,.55) !important;
+  color: rgba(31,43,58,.92) !important;
+}
+
+/* Pills / metrics: lighter, not dark */
+.hero-metrics .metric{
+  background: rgba(255,255,255,.14) !important;
+  border: 1px solid rgba(255,255,255,.22) !important;
+}
+.hero-metrics .metric .k{ color: rgba(255,255,255,.92) !important; }
+.hero-metrics .metric .t{ color: rgba(255,255,255,.78) !important; }
+
+/* Dark band under hero (as screenshot) */
+.band, .strip, .hero-strip, .callout-bar{
+  background: linear-gradient(90deg, #0B2238 0%, #081A2C 55%, #0A2136 100%) !important;
+  color: rgba(255,255,255,.92) !important;
+  border:none !important;
+}
+.band * , .strip * { color: rgba(255,255,255,.92) !important; }
+.band p, .strip p{ color: rgba(255,255,255,.82) !important; }
+
+/* Sections & cards */
+.section{ background: transparent !important; }
+.section .container{ background: transparent !important; }
+.card, .panel, .feature, .metric, .tile{
+  background:var(--surface) !important;
+  border:1px solid var(--line) !important;
+  box-shadow: 0 12px 30px rgba(16,24,40,.06) !important;
+}
+
+/* Mobile: keep pills stacked nicely */
+@media (max-width: 860px){
+  .nav a.nav-pill{ display:none !important; }
+}
