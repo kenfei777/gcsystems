@@ -94,9 +94,30 @@ ul{margin:10px 0 0 18px;color:rgba(15,27,42,.76);line-height:1.7}
 .nav a:hover{background:rgba(15,27,42,.06)}
 .nav .cta{border:1px solid rgba(15,27,42,.14);background:rgba(15,27,42,.02)}
 
+/* V6 Mobile nav visibility (light header) */
+.nav-toggle{
+  background: rgba(15,27,42,.06) !important;
+  border: 1px solid rgba(15,27,42,.14) !important;
+}
+.nav-toggle span{
+  background: rgba(15,27,42,.70) !important;
+}
+.mobile-nav{
+  background: rgba(255,255,255,.96) !important;
+  border-bottom: 1px solid rgba(15,27,42,.10) !important;
+  box-shadow: 0 24px 60px rgba(15,27,42,.12) !important;
+}
+.mobile-nav a{
+  color: rgba(15,27,42,.88) !important;
+}
+.mobile-nav a:hover{
+  background: rgba(15,27,42,.06) !important;
+}
+
+
 .nav-toggle{
   display:none;width:44px;height:44px;border:1px solid rgba(15,27,42,.14);
-  border-radius:12px;background:#fff;align-items:center;justify-content:center;gap:4px;cursor:pointer
+  border-radius:12px;background:#fff;align-items:center;justify-content:center;flex-direction:column;gap:6px;cursor:pointer
 }
 .nav-toggle span{display:block;width:18px;height:2px;background:rgba(15,27,42,.70)}
 .mobile-nav{display:none;padding:10px 22px 18px;border-bottom:1px solid rgba(15,27,42,.08);background:rgba(255,255,255,.92)}
@@ -207,13 +228,6 @@ textarea{min-height:140px;resize:vertical}
 @media (max-width: 860px){
   .nav{display:none}
   .nav-toggle{display:inline-flex}
-
-  /* Mobile header is light; ensure hamburger is visible */
-  .nav-toggle{
-    background: rgba(15, 27, 42, 0.06);
-    border-color: rgba(15, 27, 42, 0.18);
-  }
-  .nav-toggle span{background: rgba(15, 27, 42, 0.85);}
 }
 
 
