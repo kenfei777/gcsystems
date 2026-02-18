@@ -18,6 +18,14 @@
     setOpen(!isOpen());
   });
 
+  // Keyboard support (Enter / Space) for non-button toggle
+  btn.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      setOpen(!isOpen());
+    }
+  });
+
   // Close when a link is clicked
   mobile.addEventListener('click', (e) => {
     const a = e.target.closest('a');
