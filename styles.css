@@ -98,6 +98,8 @@ ul{margin:10px 0 0 18px;color:rgba(15,27,42,.76);line-height:1.7}
   display:none;width:34px;height:34px;border:none;
   border-radius:0;background:transparent;align-items:center;justify-content:center;gap:6px;cursor:pointer;
   padding:0;outline:none;-webkit-tap-highlight-color:transparent
+;
+  -webkit-appearance:none;appearance:none
 }
 .nav-toggle span{display:block;width:2px;height:18px;border-radius:1px;background:rgba(15,27,42,.72)}
 .mobile-nav{display:none;padding:10px 22px 18px;border-bottom:1px solid rgba(15,27,42,.08);background:rgba(255,255,255,.92)}
@@ -236,7 +238,14 @@ textarea{min-height:140px;resize:vertical}
 .nav a:hover{background: rgba(255,255,255,.10);}
 .nav .cta{border-color: rgba(255,255,255,.22); background: rgba(255,255,255,.08);}
 
-.nav-toggle{background: rgba(255,255,255,.10); border-color: rgba(255,255,255,.22);}
+.nav-toggle{
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    appearance: none;
+  }
 .nav-toggle span{background: rgba(255,255,255,.85);}
 .mobile-nav{background: rgba(15,27,42,.92);}
 .mobile-nav a{color: rgba(255,255,255,.92);}
@@ -580,8 +589,12 @@ h2{letter-spacing:-0.015em}
 */
 @media (max-width: 860px){
   .nav-toggle{
-    background: rgba(255,255,255,.92) !important;
-    border: 1px solid rgba(15,27,42,.18) !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
+    appearance: none;
   }
   .nav-toggle span{
     background: rgba(15,27,42,.82) !important;
