@@ -515,3 +515,26 @@ h2{letter-spacing:-0.015em}
 .hero .eyebrow,.hero .kicker{color:rgba(255,255,255,.78);} 
 .hero h1{color:#fff;text-shadow:0 10px 30px rgba(0,0,0,.18);} 
 .hero .subhead,.hero p{color:rgba(255,255,255,.88);} 
+
+
+/* ===== Logo text override: GCSystems Canada (no black box) ===== */
+.brand{
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  text-decoration: none !important;
+}
+.brand img{ display:none !important; }
+.brand-main{
+  font-weight: 650 !important;
+  letter-spacing: 0.2px !important;
+  color: rgba(31,45,61,.92) !important;
+}
+.brand-sub{
+  font-weight: 450 !important;
+  color: rgba(92,107,122,.92) !important;
+}
