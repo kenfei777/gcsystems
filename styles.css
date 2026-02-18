@@ -336,271 +336,40 @@ p, li{
 }
 
 
-/* ===== V7 Final Theme (matches approved screenshot) ===== */
-:root{
-  --bg:#F3F6FB;
-  --surface:#FFFFFF;
-  --ink:#1F2B3A;         /* softer than black */
-  --muted:#5F6F84;
-  --line:#E3EAF3;
-  --navbg:rgba(243,246,251,.92);
-  --brand:#1B4F9A;       /* cobalt blue */
-  --brand2:#0F2A44;      /* deep navy */
+/* ===== V9 Unified Hero (match Home tone) ===== */
+.unified-hero{
+  background: linear-gradient(180deg, #6f767f 0%, #8e959e 45%, #c7ccd3 100%);
+  color: #ffffff;
+  padding: 88px 0 70px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
 }
-
-body{
-  background:var(--bg) !important;
-  color:var(--ink) !important;
+.unified-hero .container{ max-width: 1120px; }
+.unified-hero__kicker{
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: .92;
+  margin-bottom: 14px;
 }
-
-h1,h2,h3,h4,h5,h6{ color:#1C2736 !important; font-weight:650 !important; letter-spacing:-.01em; }
-p,li{ color:var(--muted) !important; }
-
-/* Header: light, airy */
-.site-header{
-  background:var(--navbg) !important;
-  border-bottom:1px solid var(--line) !important;
-  backdrop-filter: blur(14px);
-}
-.brand img{ height:34px !important; width:auto; }
-.nav{ gap:18px !important; align-items:center; }
-.nav a{
-  color:rgba(31,43,58,.82) !important;
-  padding:10px 12px !important;
-  border-radius:12px !important;
-}
-.nav a:hover{ background:rgba(27,79,154,.08) !important; }
-.nav a.cta{ display:none !important; } /* replace old CTA */
-.nav a.nav-pill{
-  padding:12px 18px !important;
-  border-radius:999px !important;
-  border:1px solid rgba(27,79,154,.22) !important;
-  background:rgba(27,79,154,.06) !important;
-  color:rgba(31,43,58,.92) !important;
-  font-weight:600 !important;
-}
-.nav a.nav-pill.primary{
-  border:none !important;
+.unified-hero__title{
   color:#fff !important;
-  background: linear-gradient(135deg, #1B4F9A 0%, #0E3A80 60%, #0A2E66 100%) !important;
-  box-shadow: 0 12px 28px rgba(27,79,154,.25) !important;
-}
-
-/* Hero: approved grey gradient with white text */
-.hero{
-  background: linear-gradient(180deg, #6B707A 0%, #9AA0AA 45%, #E6EAF1 100%) !important;
-  color: rgba(255,255,255,.92) !important;
-  padding-top:72px !important;
-  padding-bottom:58px !important;
-}
-.hero h1{ color:#fff !important; }
-.hero .subtitle{ color: rgba(255,255,255,.88) !important; }
-.hero .lead{ color: rgba(255,255,255,.82) !important; max-width: 58ch; }
-
-/* Hero buttons: match pill style */
-.hero .btn.primary{
-  border:none !important;
-  background: linear-gradient(135deg, #1B4F9A 0%, #0E3A80 60%, #0A2E66 100%) !important;
-  box-shadow: 0 12px 28px rgba(27,79,154,.28) !important;
-}
-.hero .btn.secondary{
-  background: rgba(255,255,255,.85) !important;
-  border: 1px solid rgba(255,255,255,.55) !important;
-  color: rgba(31,43,58,.92) !important;
-}
-
-/* Pills / metrics: lighter, not dark */
-.hero-metrics .metric{
-  background: rgba(255,255,255,.14) !important;
-  border: 1px solid rgba(255,255,255,.22) !important;
-}
-.hero-metrics .metric .k{ color: rgba(255,255,255,.92) !important; }
-.hero-metrics .metric .t{ color: rgba(255,255,255,.78) !important; }
-
-/* Dark band under hero (as screenshot) */
-.band, .strip, .hero-strip, .callout-bar{
-  background: linear-gradient(90deg, #0B2238 0%, #081A2C 55%, #0A2136 100%) !important;
-  color: rgba(255,255,255,.92) !important;
-  border:none !important;
-}
-.band * , .strip * { color: rgba(255,255,255,.92) !important; }
-.band p, .strip p{ color: rgba(255,255,255,.82) !important; }
-
-/* Sections & cards */
-.section{ background: transparent !important; }
-.section .container{ background: transparent !important; }
-.card, .panel, .feature, .metric, .tile{
-  background:var(--surface) !important;
-  border:1px solid var(--line) !important;
-  box-shadow: 0 12px 30px rgba(16,24,40,.06) !important;
-}
-
-/* Mobile: keep pills stacked nicely */
-@media (max-width: 860px){
-  .nav a.nav-pill{ display:none !important; }
-}
-
-
-/* ===== V7.1 Page Hero Background Image (under nav) ===== */
-.page-hero{
-  position: relative;
-  padding: 86px 0 56px;
-  background:
-    linear-gradient(180deg, rgba(7,18,32,.45) 0%, rgba(7,18,32,.25) 55%, rgba(7,18,32,.15) 100%),
-    var(--pagehero-bg, url("assets/header-bg.jpg"));
-  background-size: cover;
-  background-position: center;
-  color: rgba(255,255,255,.92);
-}
-.page-hero::after{
-  content:"";
-  position:absolute; inset:0;
-  background: radial-gradient(1200px 420px at 18% 35%, rgba(255,255,255,.10) 0%, rgba(255,255,255,0) 60%);
-  pointer-events:none;
-}
-.page-hero .container{ position:relative; z-index:1; }
-.page-hero .kicker{
-  color: rgba(255,255,255,.78) !important;
-  letter-spacing:.22em;
-}
-.page-hero .title{
-  color:#fff !important;
-  text-shadow: 0 12px 28px rgba(0,0,0,.25);
-}
-.page-hero .lead, .page-hero p{
-  color: rgba(255,255,255,.86) !important;
-  max-width: 72ch;
-}
-
-
-/* ===== V8 MASTER DESIGN SYSTEM (Unified) ===== */
-:root{
-  --bg:#F4F6F8;
-  --surface:#FFFFFF;
-  --ink:#1F2D3D;
-  --muted:#5C6B7A;
-  --line:#E3EAF3;
-
-  --brand:#2F5DFF;
-  --brand-deep:#1B4F9A;
-
-  --navbg: rgba(244,246,248,.92);
-}
-
-body{ background:var(--bg) !important; color:var(--ink) !important; }
-h1,h2,h3,h4,h5,h6{ color:var(--ink) !important; font-weight:650 !important; letter-spacing:-.01em; }
-p,li{ color:var(--muted) !important; line-height:1.65 !important; }
-
-/* Header */
-.site-header{
-  background:var(--navbg) !important;
-  border-bottom:1px solid var(--line) !important;
-  backdrop-filter: blur(14px);
-}
-.nav a{ color: rgba(31,45,61,.84) !important; }
-.nav a:hover{ background: rgba(47,93,255,.08) !important; }
-
-.nav a.nav-pill{
-  border-radius:999px !important;
-  border:1px solid rgba(47,93,255,.22) !important;
-  background:rgba(47,93,255,.06) !important;
-  color: rgba(31,45,61,.92) !important;
-  font-weight:650 !important;
-}
-.nav a.nav-pill.primary{
-  border:none !important;
-  color:#fff !important;
-  background: linear-gradient(135deg, #2F5DFF 0%, #1B4F9A 65%, #0E3A80 100%) !important;
-  box-shadow: 0 14px 32px rgba(47,93,255,.22) !important;
-}
-
-/* Buttons */
-.btn.primary{
-  border:none !important;
-  background: linear-gradient(135deg, #2F5DFF 0%, #1B4F9A 65%, #0E3A80 100%) !important;
-  box-shadow: 0 14px 32px rgba(47,93,255,.22) !important;
-}
-.btn.secondary{
-  background: rgba(255,255,255,.92) !important;
-  border:1px solid rgba(31,45,61,.14) !important;
-  color: rgba(31,45,61,.92) !important;
-}
-
-/* Cards */
-.card, .panel, .feature, .tile, .metric{
-  background:var(--surface) !important;
-  border:1px solid var(--line) !important;
-  box-shadow: 0 14px 34px rgba(16,24,40,.06) !important;
-  border-radius:18px !important;
-}
-
-/* MASTER page hero (inner pages) */
-.master-hero{
-  position: relative;
-  padding: 110px 0 72px;
-  background: var(--hero-img) center/cover no-repeat;
-  border-bottom: 1px solid var(--line);
-}
-.master-hero__overlay{
-  position:absolute; inset:0;
-  background: linear-gradient(180deg, rgba(255,255,255,.74) 0%, rgba(255,255,255,.78) 55%, rgba(244,246,248,.92) 100%);
-  backdrop-filter: blur(2px);
-}
-.master-hero__inner{ position:relative; z-index:2; }
-.master-hero__label{
-  display:inline-flex;
-  font-size:12px;
-  letter-spacing:2px;
-  font-weight:700;
-  color: rgba(47,93,255,.95);
-  background: rgba(47,93,255,.10);
-  border: 1px solid rgba(47,93,255,.18);
-  padding: 7px 14px;
-  border-radius: 999px;
-  margin-bottom: 18px;
-}
-.master-hero__title{
   font-size: clamp(38px, 4.2vw, 56px);
-  line-height: 1.02;
-  margin: 0 0 12px;
+  line-height: 1.05;
+  margin: 0 0 10px;
+  font-weight: 700;
 }
-.master-hero__subtitle{
-  max-width: 70ch;
-  margin: 0;
+.unified-hero__subtitle{
+  color: rgba(255,255,255,.88) !important;
+  max-width: 74ch;
   font-size: 18px;
-  color: rgba(31,45,61,.82) !important;
+  margin: 0 0 20px;
 }
-
-/* Remove old dark bands if any */
-.band, .strip, .hero-strip, .callout-bar{
-  background: transparent !important;
-  border: none !important;
-  color: inherit !important;
+.unified-hero__cta{ display:flex; gap:12px; flex-wrap:wrap; }
+.unified-hero .btn.secondary{
+  background: rgba(255,255,255,.9) !important;
+  color: rgba(15,26,44,.92) !important;
+  border: 1px solid rgba(255,255,255,.35) !important;
 }
-.band *, .strip *{ color: inherit !important; }
-
 @media (max-width: 860px){
-  .master-hero{ padding: 86px 0 54px; }
-  .nav a.nav-pill{ display:none !important; }
-}
-
-
-/* ===== V8.1 Media Placeholder Alignment (light, consistent) ===== */
-.media-card{
-  background:#FFFFFF !important;
-  border:1px solid var(--line) !important;
-  box-shadow: 0 14px 34px rgba(16,24,40,.06) !important;
-}
-.media-card::before{
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.10) 0%, rgba(255,255,255,.35) 60%, rgba(244,246,248,.85) 100%),
-    var(--img, url("assets/placeholder-1.jpg")) !important;
-  background-size:cover !important;
-  background-position:center !important;
-  filter:saturate(1.05) brightness(1.05);
-}
-.media-card .label{
-  background:rgba(255,255,255,.92) !important;
-  border:1px solid rgba(31,45,61,.14) !important;
-  color:rgba(31,45,61,.85) !important;
+  .unified-hero{ padding: 72px 0 54px; }
 }
