@@ -1,12 +1,12 @@
 :root{
   --bg:#ffffff;
-  --ink:#0F1B2A;
+  --ink:#183A63;
   --muted:#5B6676;
   --soft:#F5F7FA;
   --line:rgba(15,27,42,.12);
   --shadow:0 14px 40px rgba(15,27,42,.10);
   --radius:20px;
-  --brand:#0F1B2A;
+  --brand:#183A63;
 }
 
 *{box-sizing:border-box}
@@ -137,7 +137,7 @@ ul{margin:10px 0 0 18px;color:rgba(15,27,42,.76);line-height:1.7}
 .metric .t{font-size:12px;color:rgba(15,27,42,.70);line-height:1.45}
 
 /* Trust band */
-.trust-band{padding:14px 0;background:#0F1B2A;color:rgba(255,255,255,.92)}
+.trust-band{padding:22px 0;background:linear-gradient(90deg, rgba(33,73,125,1), rgba(24,58,102,1));color:rgba(255,255,255,.92);font-weight:700;}
 .trust-inner{display:flex;gap:14px;justify-content:space-between;align-items:center;font-size:13px}
 
 /* Page hero */
@@ -165,7 +165,6 @@ ul{margin:10px 0 0 18px;color:rgba(15,27,42,.76);line-height:1.7}
 .media-card .label{position:absolute;left:16px;bottom:16px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.85);border:1px solid rgba(15,27,42,.12);font-size:12px;color:rgba(15,27,42,.80)}
 
 /* Footer */
-.footer{padding:30px 0 40px;border-top:1px solid rgba(15,27,42,.08);background:#fff}
 .footer-inner{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
 .footer-brand{font-weight:900;letter-spacing:-.02em}
 .footer-sub{margin-top:6px;color:rgba(15,27,42,.70);font-size:13px}
@@ -255,7 +254,7 @@ textarea{min-height:140px;resize:vertical}
 
 /* ===== V6 Light Theme Override (brighter, medical B2B) ===== */
 :root{
-  --ink:#0F1B2A;
+  --ink:#183A63;
   --muted:#536579;
   --soft:#F6F8FB;
   --card:#FFFFFF;
@@ -306,12 +305,6 @@ body{background:#fff !important;color:var(--ink) !important;}
   border-bottom: 1px solid var(--line) !important;
 }
 /* Footer: less harsh */
-.footer{
-  background: #0F1B2A !important;
-  color: rgba(255,255,255,.92) !important;
-}
-
-
 /* ===== V6.1 Softer Typography ===== */
 :root{
   --ink:#1E2A38;          /* softer primary text */
@@ -513,6 +506,11 @@ h2{letter-spacing:-0.015em}
 .page-hero__content h1{letter-spacing:-0.02em}
 .page-hero__content p{color:rgba(255,255,255,.88)}
 
-.footer{
-  background:linear-gradient(180deg, rgba(10, 30, 55, 1), rgba(8, 24, 44, 1));
-}
+
+
+.footer{padding:30px 0 40px;border-top:1px solid rgba(15,27,42,.08);background:transparent}
+.footer{background:linear-gradient(180deg, rgba(33,73,125,1), rgba(24,58,102,1));color:rgba(255,255,255,.92)}
+.footer a{color:rgba(255,255,255,.9)}
+.footer a:hover{background:rgba(255,255,255,.10)}
+.footer-sub{color:rgba(255,255,255,.78)}
+.footer-links{color:rgba(255,255,255,.86)}
