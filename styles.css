@@ -634,3 +634,7 @@ h2{letter-spacing:-0.015em}
 @media (max-width: 900px){
   .platform-img{ max-height: none; }
 }
+.col-4 img{
+  object-fit:cover;
+  object-position:top;
+}
