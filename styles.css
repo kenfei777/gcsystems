@@ -609,3 +609,8 @@ h2{letter-spacing:-0.015em}
 /* Platform page: improve content hierarchy */
 .card h3 { font-size: 24px; margin: 18px 0 10px; }
 .card p, .card li { font-size: 18px; line-height: 1.6; }
+
+
+/* Platform: prevent card stretching to image height */
+.platform-split{align-items:start;}
+.platform-split > *{align-self:start;}
